@@ -1,0 +1,55 @@
+#grad {
+    background-image: linear-gradient(to right, #2E7FE4, #1515AF); 
+} 
+.logo{
+    color: #2E84E7 !important;
+}
+
+.slash {
+    color: #1515AF;
+}
+
+.active-col{
+    background-image: linear-gradient(to right, #2E7FE4, #1515AF) !important;
+}
+body{
+    background-color: #F0F2F7;
+}
+
+
+/* footer */
+#footer {
+    position:absolute;
+    background-color: #E3E7EB;
+}
+
+
+/* datatables */
+
+#mypsp-table {
+  background-color: #AAD2FF;
+}
+
+#my-tb-th {
+  background-color: #DEE2E6;
+}
+
+#myTable tbody tr:nth-child(even),
+#myTable2 tbody tr:nth-child(even) {
+  background-color: #3ECE2B;
+}
+
+#myTable tbody tr:nth-child(odd),
+#myTable2 tbody tr:nth-child(odd) {
+  background-color: #F9BD1F;
+}
+
+/* fourth div */
+
+.row-full {
+    background-color: #AAD2FF;
+}
+
+.dataTables_wrapper {
+    padding: 0 !important;
+}
