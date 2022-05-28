@@ -1,0 +1,49 @@
+.navbar-nav.navbar-center {
+  
+  
+    transform: translatex(-50%);
+    font-size: 36px;
+}
+
+
+.img1 {  
+    
+    background: url("../wll.png"); 
+    background-repeat: no-repeat;
+    height: 900px;
+    background-size:cover ;
+} 
+
+
+
+#head-1 .temp1 {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 2450%;
+    margin-left: -20%;  
+    @media only screen and (max-width: 600px) {
+        font-size: 10rem;
+      }
+}
+#crd1 {
+    width: 18rem;
+}
+
+#head-2 .temp2 {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 1600%;
+    margin-left: 25%;  
+    margin-top: 5%;
+    @media only screen and (max-width: 600px) {
+        font-size: 10rem;
+      }
+}
+
+.custom-icon {
+    font-size: 160px;
+}
+
+.custom-heading {
+text-align: center;
+}
