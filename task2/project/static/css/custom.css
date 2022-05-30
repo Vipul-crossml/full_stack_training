@@ -1,0 +1,126 @@
+.navbar-nav.navbar-center {
+  
+  
+    transform: translatex(-50%);
+    font-size: 36px;
+}
+
+
+.img1 {  
+    
+    background: url("../wll.png"); 
+    background-repeat: no-repeat;
+    height: 900px;
+    background-size:cover ;
+} 
+
+
+
+#head-1 .temp1 {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 2450%;
+    margin-left: -20%;  
+}
+
+@media only screen and (max-width: 500px) {
+    #head-1 {
+        width: 100%;
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #head-1 {
+        width: 100%;
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 250px) {
+    #head-1 {
+        width: 100%;
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+#crd1 {
+    width: 18rem;
+}
+
+#head-2 .temp2 {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 2400%;
+    margin-left: auto;  
+    margin-top: 5%;
+    @media only screen and (max-width: 600px) {
+        font-size: 10rem;
+      }
+}
+@media only screen and (max-width: 500px) {
+    #head-2 {
+        width: 100%;
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #head-2 {
+        width: 100%;
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 250px) {
+    #head-2 {
+        width: 100%;
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+.custom-number {
+    font-size: 160px;
+}
+
+.how {
+    text-align: center;
+}
+
+
+.contact-uss {
+    background: url("../images/4-1.jpg");
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.custom-back {
+    background: black;
+    z-index: 1;
+    height: 800px;
+    opacity: .8;
+    background-size: cover;
+}
+
+
+
+.contact-uss p{
+    font-size: 12px;
+    padding-bottom: 1%;
+}
+
+.last {
+    margin-top: 10rem;
+    line-height: 20px;
+}
+
+.term {
+    margin-left: 10px;
+}
