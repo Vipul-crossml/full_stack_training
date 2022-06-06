@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Adding bootstrap css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="custom.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-fluid bg-light">
+        <div class="container">
+
+            <!-- for spacing{end} -->
+            <div class="p-4"></div>
+            <!-- for spacing{end} -->
+
+
+            <p class="fw-bold"><span class="text-primary">| </span>
+                GENERAL JOURNAL </p>
+            <div class="dropdown text-end ">
+                <button class="btn border dropdown-toggle temp1" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="">Select existing template to load... </span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row mx-5 ps-5 text-end mt-3 mb-1 ">
+            <div col-md-auto mx-5>
+                <button class="border-3" type="submit" href="" formaction="">
+                    <p class=""><a href="/tables.html" class="act1">table</a></p>
+                </button>
+            </div>
+        </div>
+        <div class="container border  pt-2 bg-white">
+            <form class="formMain">
+                <div class="row">
+                    <div class="col px-4">
+                        <label for="validationTooltip01" class="form-label text-muted mt-2">Template name</label>
+                        <input type="text" class="form-control mb-3 w-25 p-2" id="validationTooltip01"
+                            placeholder="Journal" required>
+                    </div>
+                    <div class="col-md-auto px-4">
+                        <div class="dropdown">
+                            <p class="text-muted mt-2 mb-2">Currency</p>
+                            <a class="btn border dropdown-toggle p-2 mb-3 " href="#" role="button" id="dropdownMenuLink"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="text-muted mx-3 ">
+                                    USD
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col col-lg-2">
+                        <p class="text-muted mt-2 mb-2">AUD Conversion</p>
+                        <input type="text" class="form-control" aria-label="AUD Conversion" placeholder="123">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 px-4">
+                        <label for="validationTooltip01" class="form-label text-muted mt-2">Transaction Date<span
+                                class="text-danger">*</span></label>
+                        <input type="date" class="form-control mb-3 w-75 p-2" id="validationTooltip02" placeholder=""
+                            required>
+                    </div>
+                    <div class="col-md-auto ref" id="ref">
+                        <label for="validationTooltip01" class="form-label text-muted mt-2">Reference Number<span
+                                class="text-danger">*</span></label>
+                        <input type="text" class="form-control mb-3 w-50 p-2 " id="validationTooltip02" placeholder=""
+                            value="123" required>
+                    </div>
+                    <div class="col trans" id="trans">
+                        <label for="validationTooltip01" class="form-label text-muted mt-2 ms-4 ps-4">Transaction
+                            Number<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control mb-3 w-50 p-2 ms-5" id="validationTooltip02"
+                            placeholder="" required>
+                    </div>
+                </div>
+                <div class="tableInForm ms-2 mt-3">
+                    <table id="table3" class="table table-bordered ">
+                        <thead class="table3">
+
+                            <th>ACCOUNT</th>
+                            <th>DEBIT</th>
+                            <th>CREDIT</th>
+                            <th>QUANTITY</th>
+                            <th>DESCRIPTION</th>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="">
+                                        <select onclick="" class="form-select rounded-0 mb-2 text-muted"
+                                            id="add-row">
+                                            <option selected>Select Account...</option>
+                                            <option value="1-11200-Payroll Cheque Account(AUD)">1-11200-Payroll Cheque
+                                                Account(AUD)</option>
+                                            <option id="" value="1-11400-Petty Cash(AUD)">1-11400-Petty Cash(AUD)
+                                            </option>
+                                            <option id="" value="1-11300-Cash Drawer(AUD)">1-11300-Cash Drawer(AUD)
+                                            </option>
+                                            <option id="" value="1-11500-Clearing A/c(AUD)">1-11500-Clearing A/c(AUD)
+                                            </option>
+                                            <option id="" value="1-11800-Undeposited Funds(AUD)">1-11800-Undeposited
+                                                Funds(AUD)
+                                            </option>
+                                        </select>
+
+                                    </div>
+                                </td>
+                                <td id="" class=""><input class="form-control " type="text" placeholder="input"></td>
+                                <td><input class="form-control " type="text" placeholder="input"></td>
+                                <td><input class="form-control " type="text" placeholder="input"></td>
+                                <td><input class="form-control " type="text" placeholder="input"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                    <div class="container mt-5 pt-5">
+                        <div class="row">
+                          <div class="col-8">
+                            <textarea class="form-control w-50" placeholder="Leave a comment here" id="floatingTextarea2" ></textarea>
+                        <label for="floatingTextarea2"></label>
+                          </div>
+                          <div class="col-4">
+                            <div class="input-group ">
+                                <span class="">TOTAL DEBIT</span>
+                                <span type="text" id="selecte" class=" mx-auto col-2"></span>
+                            </div>
+                            <div class="input-group ">
+                                <span class="">TOTAL CREDIT</span>
+                                <span type="text" class=" mx-auto col-2"></span>
+                            </div>
+                            <div class="input-group ">
+                                <span class="">OUT OF BALANCE</span>
+                                <span type="text"  class=" mx-auto col-2"></span>
+                            </div>
+                          </div>
+                        </div>
+            
+            
+                    </div>
+
+
+
+                    <div class="container mb-5 mt-5">
+                        <div class="row row-cols-auto">
+                          <div class="col me-3"><a class="btn btn-primary rounded-0 " href="#" role="button">Submit</a></div>
+                          <div class="col me-3" ><button class="btn rounded-0" id="buttonLast" type="submit">Cancel</button></div>
+                          <div class="col"><button class="btn rounded-0" id="buttonLast" type="submit">Save Template</button></div>
+                        </div>
+                    </div>        
+            </form>
+        </div>
+
+    </div>
+
+    <!--Adding jquery & javascript-->
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
