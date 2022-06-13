@@ -1,0 +1,151 @@
+.img1 {  
+    
+    background: url("../images/3297196.jpg"); 
+    background-repeat: no-repeat;
+    background-size:cover ;
+    position: relative;
+
+} 
+
+.color1 {
+    color: #1e81b0 ;
+}
+
+.img2 {
+
+    padding: 20px 0px 0px 0px;
+    position: relative;
+    width: 90%;
+    height: 560px;
+    float: right;
+    top: 150px;
+
+}
+
+.img3 {
+    width: 8%;
+    z-index: 1;
+    position: absolute;
+    margin-top: 21%;
+    margin-left: 17%;
+    opacity: 0.7;
+
+}
+
+.play {
+    z-index: 2;
+    width: 3%;
+    position: absolute;
+    margin-left: -5%;    
+    margin-top: 27%;
+    
+}
+
+.Company-1 {
+    opacity: 0.6;
+}
+.custom-image
+{
+    position: absolute;
+    top: 20%;
+}
+
+.small-image
+{
+    position: absolute;
+    bottom: 2%;
+    height: 224px;
+    width: 176px;
+    background: url('../images/pexels-marco-milanesi-2670898.jpg') no-repeat;
+    background-size: cover;
+    line-height: 224px;
+    text-align: left;
+    margin-left: -3%;
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.orange {
+    background-color: #FAEAD7;
+}
+.green {
+    background-color:#8fbc8f;
+}
+.blue {
+    background-color: #add8e6
+    ;
+}
+
+.image4 {
+    background-size: cover;
+}
+
+.what {
+    font-size: xx-small;
+}
+
+.text3 {
+    font-size: small;
+}
+
+.offer {
+    border-radius: 25px;
+}
+.hat {
+    width: 15%;
+}
+.dot {
+    width: 4%;
+}
+.sign {
+    width: 4%;
+}
+
+
+.bl-img {
+    background: url('../images/blue.png') no-repeat;
+    background-repeat: no-repeat;
+    background-size:cover ;
+    position: relative;
+
+}
+.check1 {
+    width: 9%;
+    margin-left: -10%;
+    margin-bottom: 2%;
+}
+
+.arrow {
+    width: 6%;
+}
+
+.lastimag {
+    position: relative;
+    width: 90%;
+    float: center;
+    top: 100px;
+}
+.copy {
+    font-size: small;
+}
+.copyright {
+    width: 10%;
+
+}
+
+.company-icon {
+    width: 8%;
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    z-index: 99; /* Make sure it does not overlap */
+    outline: none; /* Remove outline */
+    cursor: pointer; /* Add a mouse pointer on hover */
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
