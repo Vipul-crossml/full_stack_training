@@ -7,17 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Adding bootstrap css -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="../tables/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../tables/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="custom.css">
+    <script src="../tables/main.js"></script>
 
     <title>Document</title>
 </head>
 
 <body>
-    
+
     <div class="container-fluid bg-light">
-        
+
         <!-- general journal start-->
         <div class="container">
 
@@ -41,18 +42,18 @@
             </div>
         </div>
         <!--general journal end-->
-        
+
         <!--button for tables page start-->
         <div class="row mx-5 ps-5 text-end mt-3 mb-1 ">
             <div col-md-auto mx-5>
                 <button class="border-3" type="submit" href="" formaction="">
-                    <p class=""><a href="/tables.html" class="act1">table</a></p>
+                    <p class=""><a href="../tables/tables.html" class="act1">table</a></p>
                 </button>
             </div>
         </div>
         <!--button for tables page end-->
-        
-        
+
+
         <div class="container border  pt-2 bg-white">
             <!-- form starting -->
             <form class="formMain">
@@ -118,9 +119,8 @@
                             <tr>
                                 <td>
                                     <div class="">
-                                        <select onclick="" class="form-select rounded-0 mb-2 text-muted"
-                                            id="add-row">
-                                            <option selected>Select Account...</option>
+                                        <select onclick="newRow()" class="form-select rounded-0 mb-2 text-muted" id="add-row">
+                                            <option selected disabled>Select Account...</option>
                                             <option value="1-11200-Payroll Cheque Account(AUD)">1-11200-Payroll Cheque
                                                 Account(AUD)</option>
                                             <option id="" value="1-11400-Petty Cash(AUD)">1-11400-Petty Cash(AUD)
@@ -138,19 +138,20 @@
                                 </td>
                                 <td id="" class=""><input class="form-control " type="text" placeholder="input"></td>
                                 <td><input class="form-control " type="text" placeholder="input"></td>
-                                <td><input class="form-control " type="text" placeholder="input"></td>
-                                <td><input class="form-control " type="text" placeholder="input"></td>
+                                <td></td>
+                                <td></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                    <div class="container mt-5 pt-5">
-                        <div class="row">
-                          <div class="col-8">
-                            <textarea class="form-control w-50" placeholder="Leave a comment here" id="floatingTextarea2" ></textarea>
-                        <label for="floatingTextarea2"></label>
-                          </div>
-                          <div class="col-4">
+                <div class="container mt-5 pt-5">
+                    <div class="row">
+                        <div class="col-8">
+                            <textarea class="form-control w-50" placeholder="Leave a comment here"
+                                id="floatingTextarea2"></textarea>
+                            <label for="floatingTextarea2"></label>
+                        </div>
+                        <div class="col-4">
                             <div class="input-group ">
                                 <span class="">TOTAL DEBIT</span>
                                 <span type="text" id="selecte" class=" mx-auto col-2"></span>
@@ -161,33 +162,39 @@
                             </div>
                             <div class="input-group ">
                                 <span class="">OUT OF BALANCE</span>
-                                <span type="text"  class=" mx-auto col-2"></span>
+                                <span type="text" class=" mx-auto col-2"></span>
                             </div>
-                          </div>
                         </div>
-            
-            
                     </div>
 
 
+                </div>
 
-                    <div class="container mb-5 mt-5">
-                        <div class="row row-cols-auto">
-                          <div class="col me-3"><a class="btn btn-primary rounded-0 " href="#" role="button">Submit</a></div>
-                          <div class="col me-3" ><button class="btn rounded-0" id="buttonLast" type="submit">Cancel</button></div>
-                          <div class="col"><button class="btn rounded-0" id="buttonLast" type="submit">Save Template</button></div>
+
+
+                <div class="container mb-5 mt-5">
+                    <div class="row row-cols-auto">
+                        <div class="col me-3"><a class="btn btn-primary rounded-0 " href="#" role="button">Submit</a>
                         </div>
-                    </div>        
+                        <div class="col me-3"><button class="btn rounded-0" id="buttonLast"
+                                type="submit">Cancel</button></div>
+                        <div class="col"><button class="btn rounded-0" id="buttonLast" type="submit">Save
+                                Template</button></div>
+                    </div>
+                </div>
             </form>
             <!--form end -->
         </div>
-        
+
 
     </div>
 
     <!--Adding jquery & javascript-->
 
-    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="../tables/js/bootstrap.bundle.js"></script>
+
+
+
 
 </body>
 
