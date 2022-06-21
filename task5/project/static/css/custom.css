@@ -30,3 +30,12 @@ body {
     background-color: #42768e;
 }
 
+.text1 {
+    font-size: small;
+    font-weight: bold;
+}
+
+.text2 {
+    font-size: x-small;
+    font-weight: bold;
+}

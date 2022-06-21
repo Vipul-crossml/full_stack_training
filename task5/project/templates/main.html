@@ -39,19 +39,19 @@
         <ul class="navbar-nav">
           <li class="nav-item text-center pt-2">
             <img src="../static/images/speedometer (2).png" class="w-25" alt="...">
-            <a class="nav-link lightblue fs-6" aria-current="page" href="#">DASHBOARD</a>
+            <a class="nav-link lightblue fs-6 fw-bold" aria-current="page" href="#">DASHBOARD</a>
           </li>
           <li class="nav-item text-center pt-2">
             <img src="../static/images/menu2.png" class="menu " alt="...">
-            <a class="nav-link lightblue fs-6" href="#">CONFIGURE PROCESS</a>
+            <a class="nav-link lightblue fs-6 fw-bold" href="#">CONFIGURE PROCESS</a>
           </li>
           <li class="nav-item text-center pt-2">
             <img src="../static/images/file.png" class="img1" alt="...">
-            <a class="nav-link lightblue fs-6" href="#">IMPORT TRAINING</a>
+            <a class="nav-link lightblue fs-6 fw-bold" href="#">IMPORT TRAINING</a>
           </li>
           <li class="nav-item text-center pt-2">
             <img src="../static/images/globe.png" class="global " alt="...">
-            <a class="nav-link lightblue fs-6" href="#">GLOBAL MODEL</a>
+            <a class="nav-link lightblue fs-6 fw-bold" href="#">GLOBAL MODEL</a>
           </li>
         </ul>
       </div>
@@ -69,10 +69,13 @@
 
   <!-- start -->
   <div class="container border bg-white p-2 ">
-    <div class="border-bottom">
-      dsfsaf
+    <div class="fw-bold my-3">
+      CONFIGURE NEW PROCESS 
     </div>
-    <div class="text-end mt-3 mb-3">
+    <div class="border-bottom">
+
+    </div>
+    <div class="text-end my-5">
       <button type="button" class="buttons1 p-2 border-0 text-white me-3 shadow">Create & continue next</button>
       <button type="button" class="buttons1 p-2 border-0 text-white me-3 shadow">Clear</button>
       <button type="button" class="buttons1 p-2 border-0 text-white shadow">Cancel</button>
@@ -82,20 +85,20 @@
       <div class="col-4">
         <div class="" id="">
           <ul class="navbar-nav">
-            <li class="nav-item text-center border-0 mb-2">
-              <a class="nav-link text-dark bg-light p-2" aria-current="page " href="#">CONFIGURE PROCESS</a>
+            <li class="nav-item text-center mb-2">
+              <a class="nav-link text-dark  p-2 border-0 bg-light w-75" aria-current="page " href="#">CONFIGURE PROCESS</a>
             </li>
-            <li class="nav-item text-center border-0 mb-2">
-              <a class="nav-link text-dark bg-light p-2" aria-current="page" href="#">CNN MODEL</a>
+            <li class="nav-item text-center  mb-2">
+              <a class="nav-link text-dark p-2  border-0 bg-light w-75" aria-current="page" href="#">CNN MODEL</a>
             </li>
-            <li class="nav-item text-center border-0 mb-2">
-              <a class="nav-link text-dark bg-light p-2" aria-current="page" href="#">MANAGE ATTRIBUTES</a>
+            <li class="nav-item text-center mb-2">
+              <a class="nav-link text-dark p-2  border-0 bg-light w-75" aria-current="page" href="#">MANAGE ATTRIBUTES</a>
             </li>
-            <li class="nav-item text-center border-0 mb-2">
-              <a class="nav-link text-dark bg-light p-2" aria-current="page" href="#">IMPORT SCHEDULER</a>
+            <li class="nav-item text-center  mb-2">
+              <a class="nav-link text-dark p-2  border-0 bg-light w-75" aria-current="page" href="#">IMPORT SCHEDULER</a>
             </li>
             <li class="nav-item text-center ">
-              <a class="nav-link text-dark bg-light p-2" aria-current="page " href="#">EXPORT SCHEDULER</a>
+              <a class="nav-link text-dark p-2  border-0 bg-light w-75" aria-current="page " href="#">EXPORT SCHEDULER</a>
             </li>
           </ul>
         </div>
@@ -107,16 +110,16 @@
 
             <form class="form-inline" action="#">
               <div class="mb-3 row col-12">
-                <label for="staticEmail" class="col-4 col-form-label">Process name:</label>
+                <label for="process_name" class="col-4 col-form-label text1">Process name<span class="text-danger">*</span></label>
                 <div class="col-8">
-                  <input type="email" class="form-control" id="" placeholder="">
+                  <input type="" class="form-control" id="process_name" placeholder="">
                 </div>
               </div>
               <div class="mb-3 row col-sm-12">
-                <label for="staticEmail" class="col-sm-4 col-form-label">Pipeline: </label>
+                <label for="Pipeline" class="col-sm-4 col-form-label text1">Pipeline<span class="text-danger">*</span> </label>
                 <div class="col-sm-8">
                   <select class="form-select" aria-label="Default select example">
-                    <option selected>Open this select menu</option>
+                    <option selected><span class="">Engine 1</span></option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
@@ -124,34 +127,35 @@
                 </div>
               </div>
               <div class="mb-3 row col-sm-12">
-                <label for="staticEmail" class="col-sm-4 col-form-label">Classification model: </label>
+                <label for="ClassificationModel" class="col-sm-4 col-form-label text1">Classification model<span class="text-danger">*</span> </label>
                 <div class="col-sm-8">
                   <select class="form-select" aria-label="Default select example">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option selected></option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
                   </select>
                 </div>
               </div>
               <div class="checkbox">
-                <label for="documents" class="">Input documents:</label>
-                <label><input type="checkbox"> me</label>
-                <label><input type="checkbox"> me</label>
-                <label><input type="checkbox"> me</label>
-                <label><input type="checkbox"> me</label>
-                <label><input type="checkbox"> me</label>
+                <label for="documents" class="text1">Input documents<span class="text-danger">*</span></label>
+                <label class="text2 p-2 fw-bold"><input type="checkbox"> JPG</label>
+                <label class=" text2 p-2 fw-bold"><input type="checkbox"> PDF</label>
+                <label class=" text2 p-2 fw-bold"><input type="checkbox"> JPEG</label>
+                <label class=" text2 p-2 fw-bold"><input type="checkbox"> TIF</label>
+                <label class=" text2 p-2 fw-bold"><input type="checkbox"> PNG</label>
               </div>
             </form>
           </div>
-          <div class="border-top w-100 my-4">
+          <div class="border-top my-4 line1">
           </div>
+
+          <!-- second section -->
           <div class="col-12">
             <div class="mb-3 row col-sm-12">
-              <label for="staticEmail" class="col-sm-4 col-form-label">User id:</label>
+              <label for="Id" class="col-sm-4 col-form-label text1">User id<span class="text-danger">*</span></label>
               <div class="col-sm-8">
                 <select class="form-select" aria-label="Default select example">
-                  <option selected>Open this select menu</option>
+                  <option selected>Create a new user</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
                   <option value="3">Three</option>
@@ -160,21 +164,21 @@
             </div>
           </div>
           <div class="mb-3 row col-12">
-            <label for="staticEmail" class="col-4 col-form-label">First name:</label>
+            <label for="firstName" class="col-4 col-form-label text1">First name<span class="text-danger">*</span></label>
+            <div class="col-8">
+              <input type="text" class="form-control" id="" placeholder="">
+            </div>
+          </div>
+          <div class="mb-3 row col-12">
+            <label for="staticEmail" class="col-4 col-form-label text1">Email<span class="text-danger">*</span></label>
             <div class="col-8">
               <input type="email" class="form-control" id="" placeholder="">
             </div>
           </div>
           <div class="mb-3 row col-12">
-            <label for="staticEmail" class="col-4 col-form-label">Email</label>
+            <label for="password" class="col-4 col-form-label text1">Password<span class="text-danger">*</span></label>
             <div class="col-8">
-              <input type="email" class="form-control" id="" placeholder="name@example.com">
-            </div>
-          </div>
-          <div class="mb-3 row col-12">
-            <label for="staticEmail" class="col-4 col-form-label">Password:</label>
-            <div class="col-8">
-              <input type="email" class="form-control" id="" placeholder="">
+              <input type="password" class="form-control" id="" placeholder="">
             </div>
           </div>
 
@@ -184,7 +188,7 @@
         <div class="row row-cols-2">
           <div class="col-12">
             <div class="mb-3 row col-sm-12">
-              <label for="staticEmail" class="col-sm-4 col-form-label">Time zone: </label>
+              <label for="timezone" class="col-sm-4 col-form-label text1">Time zone <span class="text-danger">*</span></label>
               <div class="col-sm-8">
                 <select class="form-select" aria-label="Default select example">
                   <option selected>Open this select menu</option>
@@ -195,7 +199,7 @@
               </div>
             </div>
             <div class="mb-3 row col-sm-12">
-              <label for="staticEmail" class="col-sm-4 col-form-label">Process SLA:</label>
+              <label for="ProcessSLA" class="col-sm-4 col-form-label text1">Process SLA<span class="text-danger">*</span></label>
               <div class="col-sm-8">
                 <select class="form-select" aria-label="Default select example">
                   <option selected>Open this select menu</option>
@@ -206,29 +210,28 @@
               </div>
             </div>
             <div class="mb-3 row col-sm-12">
-              <label for="staticEmail" class="col-sm-4 col-form-label">Pre processing:</label>
+              <label for="preprocessing" class="col-sm-4 col-form-label text1">Pre processing<span class="text-danger">*</span></label>
               <div class="col-sm-8">
                 <select class="form-select" aria-label="Default select example">
-                  <option selected>Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                  <option selected></option>
+                  <option value="1">yes</option>
+                  <option value="2">no</option>
                 </select>
               </div>
             </div>
           </div>
           <div class="col-12 mt-4 mt-5 pt-5">
-            <div class="mb-3 row col-12">
-              <label for="staticEmail" class="col-4 col-form-label">Last name:</label>
+            <div class="mb-3 row col-12 ">
+              <label for="lastName" class="col-4 col-form-label text1">Last name<span class="text-danger">*</span></label>
               <div class="col-8">
-                <input type="email" class="form-control" id="" placeholder="">
+                <input type="text" class="form-control" id="" placeholder="">
               </div>
             </div>
             <div class="mb-3 row col-sm-12">
-              <label for="staticEmail" class="col-sm-4 col-form-label">User type:</label>
+              <label for="user" class="col-sm-4 col-form-label text1">User type<span class="text-danger">*</span></label>
               <div class="col-sm-8">
                 <select class="form-select" aria-label="Default select example">
-                  <option selected>Open this select menu</option>
+                  <option selected>Client</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
                   <option value="3">Three</option>
@@ -237,14 +240,13 @@
             </div>
             <div>
               <div class="mb-3 row col-12">
-                <label for="staticEmail" class="col-4 col-form-label">Password:</label>
+                <label for="password" class="col-4 col-form-label text1">Password<span class="text-danger">*</span></label>
                 <div class="col-8">
-                  <input type="email" class="form-control" id="" placeholder="">
+                  <input type="password" class="form-control" id="" placeholder="">
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
