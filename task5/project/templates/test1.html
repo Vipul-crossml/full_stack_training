@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Adding bootstrap -->
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/custom.css">
+
+
+
+    <title>Document</title>
+
+<body>
+  <!-- navbar start -->
+  <nav class="navbar navbar-expand-lg navbar-light blue mb-3">
+    <div class="container-fluid">
+      <a class="navbar-brand text-center fw-bold lightblue me-4" href="#">RANNSOLVE <br><span
+          class="text-white fs-6 text-normal">Cognitive Data Extractor</span> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item text-center pt-2">
+            <img src="../static/images/speedometer (2).png" class="w-25" alt="...">
+            <a class="nav-link lightblue fs-6 fw-bold" aria-current="page" href="#">DASHBOARD</a>
+          </li>
+          <li class="nav-item text-center pt-2">
+            <img src="../static/images/menu2.png" class="menu " alt="...">
+            <a class="nav-link lightblue fs-6 fw-bold" href="#">CONFIGURE PROCESS</a>
+          </li>
+          <li class="nav-item text-center pt-2">
+            <img src="../static/images/file.png" class="img1" alt="...">
+            <a class="nav-link lightblue fs-6 fw-bold" href="#">IMPORT TRAINING</a>
+          </li>
+          <li class="nav-item text-center pt-2">
+            <img src="../static/images/globe.png" class="global " alt="...">
+            <a class="nav-link lightblue fs-6 fw-bold" href="#">GLOBAL MODEL</a>
+          </li>
+        </ul>
+      </div>
+      <div class="">
+
+        <button class="border-0 bg-transparent text-end ">
+          <img src="../static/images/user.png" class="img2 justify-content-end" alt="...">
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar end -->
+
+
+
+  <!-- start -->
+  <div class="container border bg-white p-2 ">
+    <div class="fw-bold my-3">
+      CONFIGURE NEW PROCESS 
+    </div>
+    <div class="border-bottom">
+
+    </div>
+    <div class="text-end my-5">
+      <button type="button" class="buttons1 p-2 border-0 text-white me-3 shadow">Create & continue next</button>
+      <button type="button" class="buttons1 p-2 border-0 text-white me-3 shadow">Clear</button>
+      <button type="button" class="buttons1 p-2 border-0 text-white shadow">Cancel</button>
+    </div>
+
+    <div class="row">
+      <div class="col-4">
+        <div class="" id="">
+          <ul class="navbar-nav">
+            <li class="nav-item text-center mb-2">
+              <a class="nav-link text-dark  p-2 border-0 bg-light w-75" aria-current="page " href="#">CONFIGURE PROCESS</a>
+            </li>
+            <li class="nav-item text-center  mb-2">
+              <a class="nav-link text-dark p-2  border-0 bg-light w-75" aria-current="page" href="#">CNN MODEL</a>
+            </li>
+            <li class="nav-item text-center mb-2">
+              <a class="nav-link text-dark p-2  border-0 bg-light w-75" aria-current="page" href="#">MANAGE ATTRIBUTES</a>
+            </li>
+            <li class="nav-item text-center  mb-2">
+              <a class="nav-link text-dark p-2  border-0 bg-light w-75" aria-current="page" href="#">IMPORT SCHEDULER</a>
+            </li>
+            <li class="nav-item text-center ">
+              <a class="nav-link text-dark p-2  border-0 bg-light w-75" aria-current="page " href="#">EXPORT SCHEDULER</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="row row-cols-2">
+          <div class="col-12">
+            <form class="form-inline" action="#">
+              <div class="mb-3 row col-12">
+                <label for="process_name" class="col-4 col-form-label text1">Process name<span class="text-danger">*</span></label>
+                <div class="col-8">
+                  <input type="" class="form-control" id="process_name" placeholder="">
+                </div>
+              </div>
+              <div class="mb-3 row col-sm-12">
+                <label for="Pipeline" class="col-sm-4 col-form-label text1">Pipeline<span class="text-danger">*</span> </label>
+                <div class="col-sm-8">
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected><span class="">Engine 1</span></option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mb-3 row col-sm-12">
+                <label for="ClassificationModel" class="col-sm-4 col-form-label text1">Classification model<span class="text-danger">*</span> </label>
+                <div class="col-sm-8">
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected></option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                  </select>
+                </div>
+              </div>
+              <div class="checkbox">
+                <label for="documents" class="text1">Input documents<span class="text-danger">*</span></label>
+                <label class="text2 p-2 fw-bold"><input type="checkbox"> JPG</label>
+                <label class=" text2 p-2 fw-bold"><input type="checkbox"> PDF</label>
+                <label class=" text2 p-2 fw-bold"><input type="checkbox"> JPEG</label>
+                <label class=" text2 p-2 fw-bold"><input type="checkbox"> TIF</label>
+                <label class=" text2 p-2 fw-bold"><input type="checkbox"> PNG</label>
+              </div>
+            </form>
+          </div>
+          <div class="border-top my-4 line1">
+          </div>
+
+          <!-- second section -->
+          <div class="col-12">
+            <div class="mb-3 row col-sm-12">
+              <label for="Id" class="col-sm-4 col-form-label text1">User id<span class="text-danger">*</span></label>
+              <div class="col-sm-8">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Create a new user</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3 row col-12">
+            <label for="firstName" class="col-4 col-form-label text1">First name<span class="text-danger">*</span></label>
+            <div class="col-8">
+              <input type="text" class="form-control" id="" placeholder="">
+            </div>
+          </div>
+          <div class="mb-3 row col-12">
+            <label for="staticEmail" class="col-4 col-form-label text1">Email<span class="text-danger">*</span></label>
+            <div class="col-8">
+              <input type="email" class="form-control" id="" placeholder="">
+            </div>
+          </div>
+          <div class="mb-3 row col-12">
+            <label for="password" class="col-4 col-form-label text1">Password<span class="text-danger">*</span></label>
+            <div class="col-8">
+              <input type="password" class="form-control" id="" placeholder="">
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="col">
+        <div class="row row-cols-2">
+          <div class="col-12">
+            <div class="mb-3 row col-sm-12">
+              <label for="timezone" class="col-sm-4 col-form-label text1">Time zone <span class="text-danger">*</span></label>
+              <div class="col-sm-8">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="mb-3 row col-sm-12">
+              <label for="ProcessSLA" class="col-sm-4 col-form-label text1">Process SLA<span class="text-danger">*</span></label>
+              <div class="col-sm-8">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="mb-3 row col-sm-12">
+              <label for="preprocessing" class="col-sm-4 col-form-label text1">Pre processing<span class="text-danger">*</span></label>
+              <div class="col-sm-8">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected></option>
+                  <option value="1">yes</option>
+                  <option value="2">no</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mt-4 mt-5 pt-5">
+            <div class="mb-3 row col-12 ">
+              <label for="lastName" class="col-4 col-form-label text1">Last name<span class="text-danger">*</span></label>
+              <div class="col-8">
+                <input type="text" class="form-control" id="" placeholder="">
+              </div>
+            </div>
+            <div class="mb-3 row col-sm-12">
+              <label for="user" class="col-sm-4 col-form-label text1">User type<span class="text-danger">*</span></label>
+              <div class="col-sm-8">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Client</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <div class="mb-3 row col-12">
+                <label for="password" class="col-4 col-form-label text1">Password<span class="text-danger">*</span></label>
+                <div class="col-8">
+                  <input type="password" class="form-control" id="" placeholder="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- end -->
+
+
+
+
+
+
+
+
+
+
+
+  <!--adding javascript-->
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/bootstrap.bundle.js"></script>
+
+
+  <!-- adding popper -->
+  <script src="../static/js/popper.min.js"></script>
+
+
+
+  <!-- adding our custom js  -->
+  <script src="../static/js/custom.js"></script>
+</body>
+
+</html>

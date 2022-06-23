@@ -88,14 +88,8 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sample',
-        'USER': 'user',
-        'PASSWORD': '1234',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
         'OPTIONS': {
-            # 'read_default_file': os.path.join(BASE_DIR, 'cde_db_qa.cnf'),
-            'charset' : 'utf8mb4'
+            'read_default_file': os.path.join(BASE_DIR, 'cred.cnf'),
         
         }
     }

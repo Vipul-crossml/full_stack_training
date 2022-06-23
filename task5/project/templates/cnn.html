@@ -1,64 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Adding bootstrap -->
-    <link rel="stylesheet" href="../static/css/bootstrap.css">
-    <link rel="stylesheet" href="../static/css/bootstrap.css">
-    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../static/css/custom.css">
+       <!-- Adding bootstrap -->
+       <link rel="stylesheet" href="../static/css/bootstrap.css">
+       <link rel="stylesheet" href="../static/css/bootstrap.css">
+       <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+       <link rel="stylesheet" href="../static/css/custom.css">
+
     <title>Document</title>
 </head>
 
+
 <body>
+    <div class="container border bg-white my-5" >
 
-    <!-- navbar start -->
-    <nav class="navbar navbar-expand-lg navbar-light blue mb-3">
-        <div class="container-fluid">
-            <a class="navbar-brand text-center fw-bold lightblue me-4" href="#">RANNSOLVE <br><span
-                    class="text-white fs-6 text-normal">Cognitive Data Extractor</span> </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item text-center pt-2">
-                        <img src="../static/images/speedometer (2).png" class="w-25" alt="...">
-                        <a class="nav-link lightblue fs-6 fw-bold" aria-current="page" href="#">DASHBOARD</a>
-                    </li>
-                    <li class="nav-item text-center pt-2">
-                        <img src="../static/images/menu2.png" class="menu " alt="...">
-                        <a class="nav-link lightblue fs-6 fw-bold" href="#">CONFIGURE PROCESS</a>
-                    </li>
-                    <li class="nav-item text-center pt-2">
-                        <img src="../static/images/file.png" class="img1" alt="...">
-                        <a class="nav-link lightblue fs-6 fw-bold" href="#">IMPORT TRAINING</a>
-                    </li>
-                    <li class="nav-item text-center pt-2">
-                        <img src="../static/images/globe.png" class="global " alt="...">
-                        <a class="nav-link lightblue fs-6 fw-bold" href="#">GLOBAL MODEL</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="">
-
-                <button class="border-0 bg-transparent text-end ">
-                    <img src="../static/images/user.png" class="img2 justify-content-end" alt="...">
-                </button>
-            </div>
-        </div>
-    </nav>
-    <!-- navbar end -->
-
-  <!-- content -->
-    <div class="container border bg-white">
-        <div class=" mt-4 fs-5">
-            CONFIGURE NEW PROCESS 
+        <div class=" mt-4 fs-5 p-2">
+            PROCESS MANAGEMENT
+            <br>
+           <a href="#" class=""> DASHBOARD / ICA </a>
             <div class="border-bottom w-100 mt-3">
             </div>
         </div>
@@ -68,11 +32,13 @@
 
         <!-- buttons start-->
         <div class="text-end">
-            <button type="button" class="buttons1 p-2 shadow border-0 me-3">
-              <a href="../templates/cnn.html"  class="text-white   text-decoration-none ">Create & continue next</a>
+            <button type="button" class="buttons1 p-2 border-0 text-white me-3 shadow">Update</button>
+            <button type="button" class="buttons1 p-2 border-0 text-white me-3 shadow">Cancel</button>
+            <button type="button" class="border border-dark bg-transparent p-2 me-3 shadow ">
+                <a href="../templates/main.html"  class="text-success  text-decoration-none ">
+                    Previous</a>
             </button>
-            <button type="button" class="buttons1 p-2 border-0 text-white me-3 shadow">Clear</button>
-            <button type="button" class="buttons1 p-2 border-0 text-white shadow">Cancel</button>
+            <button type="button" class=" p-2 border border-dark text-success bg-transparent shadow">Next</button>
         </div>
         <!-- buttons end -->
 
@@ -112,10 +78,20 @@
                         <!-- first half -->
                         <div class="row row-cols-2">
                             <div class="col">
+                                <div class="text-center ms-5 my-2">
+                                    <div class="form-check form-check-inline ms-4">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                        <label class="form-check-label" for="inlineRadio1">Single class</label>
+                                    </div>
+                                    <div class="form-check form-check-inline " >
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <label class="form-check-label" for="inlineRadio2">Multi Class</label>
+                                    </div>
+                                </div>
                                 <div class="mb-3 row col-12">
-                                    <label for="process_name" class="col-4 col-form-label text1">Process name<span class="text-danger">*</span></label>
+                                    <label for="process_name" class="col-4 col-form-label text1">Type<span class="text-danger">*</span></label>
                                     <div class="col-8">
-                                      <input type="" name="process_name" class="form-control" id="process_name" placeholder="">
+                                      <input type="" class="form-control" id="process_name" placeholder="">
                                     </div>
                                   </div>
                                   <div class="mb-3 row col-sm-12">
@@ -130,19 +106,22 @@
                                     </div>
                                   </div>
                                   <div class="mb-3 row col-sm-12">
-                                    <label for="ClassificationModel" class="col-sm-4 col-form-label text1">Classification model<span class="text-danger">*</span> </label>
+                                    <label for="ClassificationModel" class="col-sm-4 col-form-label text1">Name<span class="text-danger">*</span> </label>
                                     <div class="col-sm-8">
                                       <select class="form-select" aria-label="Default select example">
-                                        <option selected name=""></option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
+                                        <option selected></option>
+                                        <option value="1">Yes</option>
+                                        <option value="2">No</option>
                                       </select>
                                     </div>
                                   </div>
                                   <div class="checkbox">
                                     <label for="documents" class="text1">Input documents<span class="text-danger">*</span></label>
-                                    <label class="text2 p-2 fw-bold ms-4">{{form.input_document}} </label>
-                                   
+                                    <label class="text2 p-2 fw-bold ms-4"><input type="checkbox"> JPG</label>
+                                    <label class=" text2 p-2 fw-bold"><input type="checkbox"> PDF</label>
+                                    <label class=" text2 p-2 fw-bold"><input type="checkbox"> JPEG</label>
+                                    <label class=" text2 p-2 fw-bold"><input type="checkbox"> TIF</label>
+                                    <label class=" text2 p-2 fw-bold"><input type="checkbox"> PNG</label>
                                   </div>
                             </div>
 
@@ -272,8 +251,6 @@
     <!-- form end -->
 
     </div>
-    <!-- content -->
-
+    
 </body>
-
 </html>
