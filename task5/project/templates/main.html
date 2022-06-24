@@ -2,277 +2,271 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Adding bootstrap -->
-    <link rel="stylesheet" href="../static/css/bootstrap.css">
-    <link rel="stylesheet" href="../static/css/bootstrap.css">
-    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../static/css/custom.css">
-    <title>Document</title>
+  <!-- Adding bootstrap -->
+  <link rel="stylesheet" href="../static/css/bootstrap.css">
+  <link rel="stylesheet" href="../static/css/bootstrap.css">
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/custom.css">
+  <title>Document</title>
 </head>
 
 <body>
 
-    <!-- navbar start -->
-    <nav class="navbar navbar-expand-lg navbar-light blue mb-3">
-        <div class="container-fluid">
-            <a class="navbar-brand text-center fw-bold lightblue me-4" href="#">RANNSOLVE <br><span
-                    class="text-white fs-6 text-normal">Cognitive Data Extractor</span> </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item text-center pt-2">
-                        <img src="../static/images/speedometer (2).png" class="w-25" alt="...">
-                        <a class="nav-link lightblue fs-6 fw-bold" aria-current="page" href="#">DASHBOARD</a>
-                    </li>
-                    <li class="nav-item text-center pt-2">
-                        <img src="../static/images/menu2.png" class="menu " alt="...">
-                        <a class="nav-link lightblue fs-6 fw-bold" href="#">CONFIGURE PROCESS</a>
-                    </li>
-                    <li class="nav-item text-center pt-2">
-                        <img src="../static/images/file.png" class="img1" alt="...">
-                        <a class="nav-link lightblue fs-6 fw-bold" href="#">IMPORT TRAINING</a>
-                    </li>
-                    <li class="nav-item text-center pt-2">
-                        <img src="../static/images/globe.png" class="global " alt="...">
-                        <a class="nav-link lightblue fs-6 fw-bold" href="#">GLOBAL MODEL</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="">
+  <!-- navbar start -->
+  <nav class="navbar navbar-expand-lg navbar-light blue mb-3">
+    <div class="container-fluid">
+      <a class="navbar-brand text-center fw-bold lightblue me-4" href="#">RANNSOLVE <br><span
+          class="text-white fs-6 text-normal">Cognitive Data Extractor</span> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item text-center pt-2">
+            <img src="../static/images/speedometer (2).png" class="w-25" alt="...">
+            <a class="nav-link lightblue fs-6 fw-bold" aria-current="page" href="#">DASHBOARD</a>
+          </li>
+          <li class="nav-item text-center pt-2">
+            <img src="../static/images/menu2.png" class="menu " alt="...">
+            <a class="nav-link lightblue fs-6 fw-bold" href="#">CONFIGURE PROCESS</a>
+          </li>
+          <li class="nav-item text-center pt-2">
+            <img src="../static/images/file.png" class="img1" alt="...">
+            <a class="nav-link lightblue fs-6 fw-bold" href="#">IMPORT TRAINING</a>
+          </li>
+          <li class="nav-item text-center pt-2">
+            <img src="../static/images/globe.png" class="global " alt="...">
+            <a class="nav-link lightblue fs-6 fw-bold" href="#">GLOBAL MODEL</a>
+          </li>
+        </ul>
+      </div>
+      <div class="">
 
-                <button class="border-0 bg-transparent text-end ">
-                    <img src="../static/images/user.png" class="img2 justify-content-end" alt="...">
-                </button>
-            </div>
-        </div>
-    </nav>
-    <!-- navbar end -->
+        <button class="border-0 bg-transparent text-end ">
+          <img src="../static/images/user.png" class="img2 justify-content-end" alt="...">
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar end -->
 
   <!-- content -->
-    <div class="container border bg-white">
-        <div class=" mt-4 fs-5">
-            CONFIGURE NEW PROCESS 
-            <div class="border-bottom w-100 mt-3">
-            </div>
+  <div class="container border bg-white">
+    <div class=" mt-4 fs-5">
+      CONFIGURE NEW PROCESS
+      <div class="border-bottom w-100 mt-3">
+      </div>
+    </div>
+
+    <!-- form start -->
+    <form class="my-4" action="add_new_process" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+
+      <!-- buttons start-->
+      <div class="text-end">
+        <button type="submit" class="buttons1 p-2 shadow border-0 me-3">
+          Create & continue next
+        </button>
+        <button type="button" class="buttons1 p-2 border-0 text-white me-3 shadow">Clear</button>
+        <button type="button" class="buttons1 p-2 border-0 text-white shadow">Cancel</button>
+      </div>
+      <!-- buttons end -->
+
+      <!-- inner elements start-->
+      <div class="row">
+        <!-- first five elements start -->
+        <div class="col-3 my-5">
+          <div class="" id="">
+            <ul class="navbar-nav">
+              <li class="nav-item text-center mb-2">
+                <a class="nav-link text-dark  p-2 border-0 bg-light w-75" aria-current="page " href="#">CONFIGURE
+                  PROCESS</a>
+              </li>
+              <li class="nav-item text-center  mb-2">
+                <a class="nav-link text-dark p-2  border-0 bg-light w-75" aria-current="page" href="#">CNN MODEL</a>
+              </li>
+              <li class="nav-item text-center mb-2">
+                <a class="nav-link text-dark p-2  border-0 bg-light w-75" aria-current="page" href="#">MANAGE
+                  ATTRIBUTES</a>
+              </li>
+              <li class="nav-item text-center  mb-2">
+                <a class="nav-link text-dark p-2  border-0 bg-light w-75" aria-current="page" href="#">IMPORT
+                  SCHEDULER</a>
+              </li>
+              <li class="nav-item text-center ">
+                <a class="nav-link text-dark p-2  border-0 bg-light w-75" aria-current="page " href="#">EXPORT
+                  SCHEDULER</a>
+              </li>
+            </ul>
+          </div>
         </div>
+        <!--first five elements end -->
 
-        <!-- form start -->
-        <form class="my-4">
+        <!-- Mid cols start -->
+        <div class="col-9 my-5 ">
+          <div class="row row-cols-2">
 
-        <!-- buttons start-->
-        <div class="text-end">
-            <button type="button" class="buttons1 p-2 shadow border-0 me-3">
-              <a href="../templates/cnn.html"  class="text-white   text-decoration-none ">Create & continue next</a>
-            </button>
-            <button type="button" class="buttons1 p-2 border-0 text-white me-3 shadow">Clear</button>
-            <button type="button" class="buttons1 p-2 border-0 text-white shadow">Cancel</button>
-        </div>
-        <!-- buttons end -->
 
-        <!-- inner elements start-->
-        <div class="row">
-            <!-- first five elements start -->
-            <div class="col-3 my-5">
-                <div class="" id="">
-                    <ul class="navbar-nav">
-                      <li class="nav-item text-center mb-2">
-                        <a class="nav-link text-dark  p-2 border-0 bg-light w-75" aria-current="page " href="#">CONFIGURE PROCESS</a>
-                      </li>
-                      <li class="nav-item text-center  mb-2">
-                        <a class="nav-link text-dark p-2  border-0 bg-light w-75" aria-current="page" href="#">CNN MODEL</a>
-                      </li>
-                      <li class="nav-item text-center mb-2">
-                        <a class="nav-link text-dark p-2  border-0 bg-light w-75" aria-current="page" href="#">MANAGE ATTRIBUTES</a>
-                      </li>
-                      <li class="nav-item text-center  mb-2">
-                        <a class="nav-link text-dark p-2  border-0 bg-light w-75" aria-current="page" href="#">IMPORT SCHEDULER</a>
-                      </li>
-                      <li class="nav-item text-center ">
-                        <a class="nav-link text-dark p-2  border-0 bg-light w-75" aria-current="page " href="#">EXPORT SCHEDULER</a>
-                      </li>
-                    </ul>
+            <!-- first col start -->
+            <div class="col-12">
+              <!-- first half -->
+              <div class="row row-cols-2">
+                <div class="col">
+                  <div class="mb-3 row col-12">
+                    <label for="process_name" class="col-4 col-form-label text1">Process name<span
+                        class="text-danger">*</span></label>
+                    <div class="col-8">
+                      {{form.process_name}} 
+                    </div>
+                  </div>
+                  <div class="mb-3 row col-sm-12">
+                    <label for="Pipeline" class="col-sm-4 col-form-label text1">Pipeline<span
+                        class="text-danger">*</span> </label>
+                    <div class="col-sm-8">
+                      {{form.pipeline}} 
+                    </div>
+                  </div>
+                  <div class="mb-3 row col-sm-12">
+                    <label for="ClassificationModel" class="col-sm-4 col-form-label text1">Classification model<span
+                        class="text-danger">*</span> </label>
+                    <div class="col-sm-8">
+                      {{form.classification_model}} 
+                    </div>
+                  </div>
+                  <div class="checkbox">
+                    <label for="documents" class="text1">Input documents<span class="text-danger">*</span></label>
+                    {{form.input_doc}} 
+                  </div>
                 </div>
-            </div>
-            <!--first five elements end -->
 
-            <!-- Mid cols start -->
-            <div class="col-9 my-5 ">
-                <div class="row row-cols-2">
-
-
-                    <!-- first col start -->
-                    <div class="col-12">
-                        <!-- first half -->
-                        <div class="row row-cols-2">
-                            <div class="col">
-                                <div class="mb-3 row col-12">
-                                    <label for="process_name" class="col-4 col-form-label text1">Process name<span class="text-danger">*</span></label>
-                                    <div class="col-8">
-                                      <input type="" name="process_name" class="form-control" id="process_name" placeholder="">
-                                    </div>
-                                  </div>
-                                  <div class="mb-3 row col-sm-12">
-                                    <label for="Pipeline" class="col-sm-4 col-form-label text1">Pipeline<span class="text-danger">*</span> </label>
-                                    <div class="col-sm-8">
-                                      <select class="form-select" aria-label="Default select example">
-                                        <option selected><span class="">Engine 1</span></option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <div class="mb-3 row col-sm-12">
-                                    <label for="ClassificationModel" class="col-sm-4 col-form-label text1">Classification model<span class="text-danger">*</span> </label>
-                                    <div class="col-sm-8">
-                                      <select class="form-select" aria-label="Default select example">
-                                        <option selected name=""></option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <div class="checkbox">
-                                    <label for="documents" class="text1">Input documents<span class="text-danger">*</span></label>
-                                    <label class="text2 p-2 fw-bold ms-4">{{form.input_document}} </label>
-                                   
-                                  </div>
-                            </div>
-
-                            <!--second half  -->
-                            <div class="col">
-                                <div class="mb-3 row col-sm-12">
-                                    <label for="timezone" class="col-sm-4 col-form-label text1">Time zone <span class="text-danger">*</span></label>
-                                    <div class="col-sm-8">
-                                      <select class="form-select" aria-label="Default select example">
-                                        <option selected>Open this select menu</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <div class="mb-3 row col-sm-12">
-                                    <label for="ProcessSLA" class="col-sm-4 col-form-label text1">Process SLA<span class="text-danger">*</span></label>
-                                    <div class="col-sm-8">
-                                      <select class="form-select" aria-label="Default select example">
-                                        <option selected>Open this select menu</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <div class="mb-3 row col-sm-12">
-                                    <label for="preprocessing" class="col-sm-4 col-form-label text1">Pre processing<span class="text-danger">*</span></label>
-                                    <div class="col-sm-8">
-                                      <select class="form-select" aria-label="Default select example">
-                                        <option selected></option>
-                                        <option value="1">yes</option>
-                                        <option value="2">no</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                            </div>
-                        </div>
+                <!--second half  -->
+                <div class="col">
+                  <div class="mb-3 row col-sm-12">
+                    <label for="timezone" class="col-sm-4 col-form-label text1">Time zone <span
+                        class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                      {{form.time_zon}} 
                     </div>
-                    <!-- first col end  -->
-
-                    <!-- midline start -->
-                    <div class="border w-100 my-4">
+                  </div>
+                  <div class="mb-3 row col-sm-12">
+                    <label for="ProcessSLA" class="col-sm-4 col-form-label text1">Process SLA<span
+                        class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                      {{form.process_sla}} 
                     </div>
-                    <!-- midline end-->
-
-                    <!-- SECOND col start -->
-                    <div class="col-12">
-                        <div class="row row-cols-2">
-                            
-                            <!-- first half -->
-                            <div class="col">
-                                <div class="mb-3 row col-sm-12">
-                                    <label for="Id" class="col-sm-4 col-form-label text1">User id<span class="text-danger">*</span></label>
-                                    <div class="col-sm-8">
-                                      <select class="form-select" aria-label="Default select example">
-                                        <option selected>Create a new user</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <div class="mb-3 row col-12">
-                                    <label for="firstName" class="col-4 col-form-label text1">First name<span class="text-danger">*</span></label>
-                                    <div class="col-8">
-                                      <input type="text" class="form-control" id="" placeholder="">
-                                    </div>
-                                  </div>
-                                  <div class="mb-3 row col-12">
-                                    <label for="staticEmail" class="col-4 col-form-label text1">Email<span class="text-danger">*</span></label>
-                                    <div class="col-8">
-                                      <input type="email" class="form-control" id="" placeholder="">
-                                    </div>
-                                  </div>
-                                  <div class="mb-3 row col-12">
-                                    <label for="password" class="col-4 col-form-label text1">Password<span class="text-danger">*</span></label>
-                                    <div class="col-8">
-                                      <input type="password" class="form-control" id="" placeholder="">
-                                    </div>
-                                  </div>
-                            </div>
-
-                            <!-- second half -->
-                            <div class="col">
-                                <div class="mb-3 row col-12 ">
-                                    <label for="lastName" class="col-4 col-form-label text1">Last name<span class="text-danger">*</span></label>
-                                    <div class="col-8">
-                                      <input type="text" class="form-control" id="" placeholder="">
-                                    </div>
-                                  </div>
-                                  <div class="mb-3 row col-sm-12">
-                                    <label for="user" class="col-sm-4 col-form-label text1">User type<span class="text-danger">*</span></label>
-                                    <div class="col-sm-8">
-                                      <select class="form-select" aria-label="Default select example">
-                                        <option selected>Client</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <div>
-                                    <div class="mb-3 row col-12">
-                                      <label for="password" class="col-4 col-form-label text1">Password<span class="text-danger">*</span></label>
-                                      <div class="col-8">
-                                        <input type="password" class="form-control" id="" placeholder="">
-                                      </div>
-                                    </div>
-                                  </div>
-                            </div>
-                        </div>
+                  </div>
+                  <div class="mb-3 row col-sm-12">
+                    <label for="preprocessing" class="col-sm-4 col-form-label text1">Pre processing<span
+                        class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                      {{form.preprocessing}} 
                     </div>
-                    <!-- SECOND col end  -->
-
+                  </div>
                 </div>
+              </div>
             </div>
-            <!--Mid cols end -->
+            <!-- first col end  -->
 
+            <!-- midline start -->
+            <div class="border w-100 my-4">
+            </div>
+            <!-- midline end-->
+
+            <!-- SECOND col start -->
+            <div class="col-12">
+              <div class="row row-cols-2">
+
+                <!-- first half -->
+                <div class="col">
+                  <div class="mb-3 row col-sm-12">
+                    <label for="Id" class="col-sm-4 col-form-label text1">User id<span
+                        class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Create a new user</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mb-3 row col-12">
+                    <label for="firstName" class="col-4 col-form-label text1">First name<span
+                        class="text-danger">*</span></label>
+                    <div class="col-8">
+                      <input type="text" class="form-control" id="" placeholder="">
+                    </div>
+                  </div>
+                  <div class="mb-3 row col-12">
+                    <label for="staticEmail" class="col-4 col-form-label text1">Email<span
+                        class="text-danger">*</span></label>
+                    <div class="col-8">
+                      <input type="email" class="form-control" id="" placeholder="">
+                    </div>
+                  </div>
+                  <div class="mb-3 row col-12">
+                    <label for="password" class="col-4 col-form-label text1">Password<span
+                        class="text-danger">*</span></label>
+                    <div class="col-8">
+                      <input type="password" class="form-control" id="" placeholder="">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- second half -->
+                <div class="col">
+                  <div class="mb-3 row col-12 ">
+                    <label for="lastName" class="col-4 col-form-label text1">Last name<span
+                        class="text-danger">*</span></label>
+                    <div class="col-8">
+                      <input type="text" class="form-control" id="" placeholder="">
+                    </div>
+                  </div>
+                  <div class="mb-3 row col-sm-12">
+                    <label for="user" class="col-sm-4 col-form-label text1">User type<span
+                        class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Client</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="mb-3 row col-12">
+                      <label for="password" class="col-4 col-form-label text1">Password<span
+                          class="text-danger">*</span></label>
+                      <div class="col-8">
+                        <input type="password" class="form-control" id="" placeholder="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- SECOND col end  -->
+
+          </div>
         </div>
-        <!-- end -->
+        <!--Mid cols end -->
+
+      </div>
+      <!-- end -->
 
 
 
     </form>
     <!-- form end -->
 
-    </div>
-    <!-- content -->
+  </div>
+  <!-- content -->
 
 </body>
 

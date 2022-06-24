@@ -1,7 +1,7 @@
 from django import forms
-from .models import NewProcess
+from .models import ConfigureNewProcess
 # Create your forms here.
-class NewProcessForm(forms.ModelForm):
+class ConfigureNewProcessForm(forms.ModelForm):
     class Meta:
-        model = NewProcess
-        fields = ('process_name', 'pipeline', 'classification_model', 'input_document', 'time_zone','process_sla','pre_processing')
+        model = ConfigureNewProcess
+        fields = '__all__'
