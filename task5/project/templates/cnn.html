@@ -28,16 +28,15 @@
     </div>
 
     <!-- form start -->
-    <form class="my-4">
-
+    <form class="my-4" action="attribute" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
       <!-- buttons start-->
       <div class="text-end">
-        <button type="button" class="buttons1 p-2 border-0 text-white me-3 shadow">Update</button>
-        <button type="button" class="buttons1 p-2 border-0 text-white me-3 shadow">Cancel</button>
-        <button type="button" class="border border-dark bg-transparent p-2 me-3 shadow ">
-          <a href="" class="text-success  text-decoration-none ">
-            Previous</a>
+        <button type="submit" class="border border-dark bg-transparent p-2 me-3 shadow ">
+          Update
         </button>
+        <button type="button" class="buttons1 p-2 border-0 text-white me-3 shadow">Cancel</button>
+        <button type="button" class="buttons1 p-2 border-0 text-white me-3 shadow">Previous</button>
         <button type="button" class=" p-2 border border-dark text-success bg-transparent shadow">Next</button>
       </div>
       <!-- buttons end -->
@@ -82,7 +81,7 @@
               <!-- first half -->
               <div class="row row-cols-2">
                 <div class="col">
-                  <div class="text-center ms-5 my-2">
+                  <!-- <div class="text-center ms-5 my-2">
                     <div class="form-check form-check-inline ms-4">
                       <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
                         value="option1">
@@ -93,7 +92,7 @@
                         value="option2">
                       <label class="form-check-label" for="inlineRadio2">Multi Class</label>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="mb-3 row col-sm-12">
                     <label for="Pipeline" class="col-sm-4 col-form-label text1">Type<span class="text-danger">*</span>
                     </label>
@@ -110,21 +109,21 @@
                     <label for="process_name" class="col-4 col-form-label text1">Name<span
                         class="text-danger">*</span></label>
                     <div class="col-8">
-                      <input type="" class="form-control" id="process_name" placeholder="">
+                      {{form.name}}
                     </div>
                   </div>
                   <div class="mb-3 row col-sm-12">
                     <label for="ClassificationModel" class="col-sm-4 col-form-label text1">Confidence Threshold<span
                         class="text-danger">*</span> </label>
                     <div class="col-8">
-                      <input type="" class="form-control" id="process_name" placeholder="">
-                    </div>
+                      {{form.threshold}}</div>
                   </div>
                   <div class="mb-3 row col-sm-12">
                     <label for="ClassificationModel" class="col-sm-4 col-form-label text1">Sample File<span
                         class="text-danger">*</span> </label>
                     <div class="col-8">
-                      <input type="file" class="form-control" id="file1" name="upload">
+                      <input type="file" accept="zip" class="form-control" id="file1" name="file">
+
                     </div>
                   </div>
                 </div>
@@ -135,76 +134,54 @@
                     <label for="Pipeline" class="col-sm-4 col-form-label text1">Epochs<span class="text-danger">*</span>
                     </label>
                     <div class="col-sm-8">
-                      <select class="form-select" aria-label="Default select example">
+                      <!-- <select class="form-select" aria-label="Default select example">
                         <option selected><span class="">Engine 1</span></option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
-                      </select>
+                      </select> -->
+                      {{form.epochs}}
                     </div>
                   </div>
                   <div class="mb-3 row col-sm-12">
                     <label for="ProcessSLA" class="col-sm-4 col-form-label text1">Batch Size<span
                         class="text-danger">*</span></label>
                     <div class="col-sm-8">
-                      <select class="form-select" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
+                      {{form.batch}}
                     </div>
                   </div>
                   <div class="mb-3 row col-sm-12">
                     <label for="preprocessing" class="col-sm-4 col-form-label text1">Kernel Initializer<span
                         class="text-danger">*</span></label>
                     <div class="col-sm-8">
-                      <select class="form-select" aria-label="Default select example">
-                        <option selected></option>
-                        <option value="1">yes</option>
-                        <option value="2">no</option>
-                      </select>
+                      {{form.kernel}}
                     </div>
                   </div>
                   <div class="mb-3 row col-sm-12">
                     <label for="Pipeline" class="col-sm-4 col-form-label text1">Optimizer<span
                         class="text-danger">*</span> </label>
                     <div class="col-sm-8">
-                      <select class="form-select" aria-label="Default select example">
-                        <option selected><span class="">Engine 1</span></option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
+                      {{form.optimizer}}
                     </div>
                   </div>
                   <div class="mb-3 row col-sm-12">
                     <label for="ProcessSLA" class="col-sm-4 col-form-label text1">Text size<span
                         class="text-danger">*</span></label>
                     <div class="col-sm-8">
-                      <select class="form-select" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
+                      {{form.text}}
                     </div>
                   </div>
                   <div class="mb-3 row col-sm-12">
                     <label for="preprocessing" class="col-sm-4 col-form-label text1">Activation<span
                         class="text-danger">*</span></label>
                     <div class="col-sm-8">
-                      <select class="form-select" aria-label="Default select example">
-                        <option selected></option>
-                        <option value="1">yes</option>
-                        <option value="2">no</option>
-                      </select>
+                      {{form.activation}}
                     </div>
                   </div>
                 </div>
               </div>
               <div class="text-center mt-4">
-                <button type="button" class=" buttons1 p-2 border-0 text-white me-3 shadow">Add</button>
+                <button type="submit"  class=" buttons1 p-2 border-0 text-white me-3 shadow">Add</button>
                 <button type="button" class="buttons1 p-2 border-0 text-white me-3 shadow">Clear</button>
               </div>
             </div>
@@ -243,13 +220,14 @@
   </form>
   <!-- form end -->
 
-      <!-- Footer start -->
-    <div class="contianer-fluid bg-white p-3 text-center text-muted fs-6 fixed-bottom">
-        <p class="">
-            <img src="../static/images/copyright.png" class="copyright" alt=".."> 
-            2022 Auto Docs. All rights reserved </p>
-    </div>
-    <!-- Footer end -->
+  <!-- Footer start -->
+  <div class="contianer-fluid bg-white p-3 text-center text-muted fs-6 fixed-bottom">
+    <p class="">
+      <img src="../static/images/copyright.png" class="copyright" alt="..">
+      2022 Auto Docs. All rights reserved
+    </p>
+  </div>
+  <!-- Footer end -->
 
 </body>
 

@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
-from .forms import ConfigureNewProcessForm
+from .forms import *
 # Create your views here.
 
 
@@ -19,14 +19,22 @@ def add_new_process(request):
         if form.is_valid():
             form.save()
         return redirect(index)
-    # if request.method == "POST":
-    #     data = ConfigureNewProcess()
-    #     data.process_name = request.POST.get('process_name')   #all the get('name_field') is form html(input field - name)
-    #     data.pipeline = request.POST.get('pipeline')
-    #     data.classication_model = request.POST.get('classification_model')
-    #     data.timezon = request.POST.get('timezon')
-    #     data.process_sla = request.POST.get('process_sla')
-    #     data.preprocessing = request.POST.get('preprocessing')
 
-    #     data.save()
-    #     return render(request, 'main.html')
+def cnn(request):
+    form = ProcessManagementForm()
+    return render(request, "cnn.html",context={'form':form})
+
+def attribute(request):
+    form=ProcessManagementForm()
+    if request.method == "POST" and request.FILES['file']:
+        form = ProcessManagementForm(request.POST)
+        print(form)
+        print(form.is_valid())
+        if form.is_valid():
+            my_model = form.save(commit=False)
+            my_model.file = request.FILES['file']
+            my_model.save()
+        return redirect(cnn)
+
+
+        
