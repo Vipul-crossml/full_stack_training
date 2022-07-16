@@ -1,0 +1,19 @@
+
+
+.fb {
+    width: 8%;
+}
+
+.img2 {
+    width: 8%;
+}  
+
+.nixon {
+    background-image: url("../images/xeric.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sign {
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
