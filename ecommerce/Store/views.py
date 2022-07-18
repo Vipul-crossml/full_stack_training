@@ -116,6 +116,15 @@ class CategoryView(APIView):
 
 def index(request):
     return render(request,'index.html')
+
+def login(request):
+    return render(request, 'Login.html')
+
+
+def signup(request):
+    return render(request, 'Signup.html')
+
+
 class ProductView(APIView):
     def get(self, request):
         user_count = Product.objects.all()

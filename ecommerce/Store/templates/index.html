@@ -1,4 +1,6 @@
 {% load static %}
+{% load cart %}
+{% load custom_filter %}
 <!doctype html>
 <html lang="en">
 
@@ -33,14 +35,12 @@
                         for (let i = 0; i < response.category.length; i++) {
                             var fetch = document.querySelector('.row').innerHTML;
                             dynamic.innerHTML = `
-                            <div class="card col-3 m-5" style="width: 18rem;">
+                            <div class="card col-3 m-5 border-0 shadow">
                             <img src="`+ response.category[i].image + `" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <h5 class="card-title">`+ response.category[i].name + ` </h5>
-                              <p class="card-text">`+ response.category[i].description + `</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                              <h5 class="card-title">`+ response.category[i].name + `</h5>
+                              <a href="#" class="btn btn-primary">Price:`+ response.category[i].price + `</a>
                             </div>
-                           
                           </div>` + fetch;
 
                         }
@@ -54,12 +54,39 @@
             })
         })
     </script>
-    <title>Hello, world!</title>
 </head>
 
 <body>
-    <div class="container  ">
+    <nav class="p-3 bg-dark text-white">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                <use xlink:href="#bootstrap"></use>
+              </svg>
+            </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Sale</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Products</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Contact Us</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+            </ul>
+    
+            <div class="text-end">
+                <form class="button">
+                        <a class="btn btn-outline-light me-2" href="{% url 'login' %}" role="button">Login</a>
+                        <a class="btn btn-warning" href="{% url 'Signup' %}" role="button">Register</a>
+                </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <div class="container mt-3 ">
         <div class="row">
+            <!-- filter -->
         </div>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
